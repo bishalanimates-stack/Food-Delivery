@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feasto - Sign Up</title>
+    <!-- Use FontAwesome for simple icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body" style="overflow: hidden; height: 100vh;">
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <a href="index.html" class="logo">Feasto</a>
+        </nav>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-card signup-card">
+            <div class="signup-image">
+                <div class="signup-image-overlay">
+                    <p style="font-size: 1.1rem; font-weight: 500; line-height: 1.4; color: white;">
+                        Experience the digital<br>epicurean journey today.
+                    </p>
+                </div>
+            </div>
+
+            <div class="signup-form-container">
+                <div class="auth-header text-left">
+                    <h2>Create Your Account</h2>
+                    <p>Join and start ordering delicious food</p>
+                </div>
+
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="signupName" placeholder="John Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="signupEmail" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Password</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="signupPassword" placeholder="••••••••" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Confirm Password</label>
+                            <div class="input-wrapper">
+                                <!-- Reusing eye icon instead of history icon for confirm password consistency or a history icon to match image slightly -->
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <input type="password" id="signupConfirm" placeholder="••••••••" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group" style="margin-top: 24px;">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">
+                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                        Create Account <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                    </button>
+
+                    <p class="form-subtext">
+                        Already have an account? <a href="login.html" class="text-link">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <div class="login-floating-images">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Food 1" class="floating-img">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Food 2" class="floating-img" style="transform: scale(1.1); z-index: 5;">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Food 3" class="floating-img">
+        </div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

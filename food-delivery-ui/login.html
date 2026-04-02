@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feasto - Login</title>
+    <!-- Use FontAwesome for simple icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body" style="overflow: hidden; height: 100vh;">
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <a href="index.html" class="logo">Feasto</a>
+        </nav>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-card login-card">
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Login to continue ordering your favorite food</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="loginEmail" placeholder="name@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label style="margin-bottom: 0;">Password</label>
+                        <a href="#" class="text-link" style="font-size: 0.8rem; font-weight: 500;">Forgot Password?</a>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required>
+                        <i class="fa-regular fa-eye password-toggle"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Login</button>
+
+                <p class="form-subtext">
+                    Don't have an account? <a href="signup.html" class="text-link">Sign Up</a>
+                </p>
+            </form>
+        </div>
+
+        <div class="login-floating-images">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Food 1" class="floating-img">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Food 2" class="floating-img" style="transform: scale(1.1); z-index: 5;">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Food 3" class="floating-img">
+        </div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
