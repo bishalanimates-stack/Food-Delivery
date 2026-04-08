@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="intro-active">
+
+<body class="intro-active" id="top">
     <div class="container">
         <!-- Navigation Bar -->
         <nav class="navbar">
-            <a href="index.html" class="logo">Feasto</a>
-            <div class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">Restaurants</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <a href="#top" class="logo">Feasto</a>
+
             <div class="nav-auth">
                 <a href="login.html" class="text-dark">Login</a>
                 <a href="signup.html" class="btn btn-primary">Sign up</a>
@@ -25,9 +23,10 @@
         </nav>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="video-container">
-                <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; border-radius: inherit;">
+                <video autoplay loop muted playsinline
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; border-radius: inherit;">
                     <source src="assets/videos/hero-video.mp4" type="video/mp4">
                 </video>
 
@@ -50,119 +49,151 @@
             <div class="carousel-container">
                 <button class="carousel-btn carousel-prev"><i class="fa-solid fa-arrow-left"></i></button>
                 <button class="carousel-btn carousel-next"><i class="fa-solid fa-arrow-right"></i></button>
-                
+
                 <div class="carousel" id="food-carousel">
                     <!-- Food Card 1 -->
                     <div class="food-card">
                         <div class="food-img-container">
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</span>
-                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="The Garden Bowl">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="The Garden Bowl">
                         </div>
                         <div class="food-info">
                             <div class="food-title">The Garden Bowl</div>
                             <div class="food-price">$18.50</div>
                         </div>
-                        <p class="food-desc">Artisan quinoa base topped with flame-seared avocado, heirloom carrots, and...</p>
-                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping" style="margin-right: 8px;"></i> Add to cart</button>
+                        <p class="food-desc">Artisan quinoa base topped with flame-seared avocado, heirloom carrots,
+                            and...</p>
+                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping"
+                                style="margin-right: 8px;"></i> Add to cart</button>
                     </div>
 
                     <!-- Food Card 2 -->
                     <div class="food-card">
                         <div class="food-img-container">
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.7</span>
-                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Truffle Pepperoni">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Truffle Pepperoni">
                         </div>
                         <div class="food-info">
                             <div class="food-title">Truffle Pepperoni</div>
                             <div class="food-price">$22.00</div>
                         </div>
-                        <p class="food-desc">Hand-stretched sourdough, 24-hour aged mozzarella, and white truffle oil...</p>
-                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping" style="margin-right: 8px;"></i> Add to cart</button>
+                        <p class="food-desc">Hand-stretched sourdough, 24-hour aged mozzarella, and white truffle oil...
+                        </p>
+                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping"
+                                style="margin-right: 8px;"></i> Add to cart</button>
                     </div>
 
                     <!-- Food Card 3 -->
                     <div class="food-card">
                         <div class="food-img-container">
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</span>
-                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wagyu Signature">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Wagyu Signature">
                         </div>
                         <div class="food-info">
                             <div class="food-title">Wagyu Signature</div>
                             <div class="food-price">$24.80</div>
                         </div>
-                        <p class="food-desc">Aged Wagyu beef patty, house-made onion jam, and sharp Vermont cheddar...</p>
-                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping" style="margin-right: 8px;"></i> Add to cart</button>
+                        <p class="food-desc">Aged Wagyu beef patty, house-made onion jam, and sharp Vermont cheddar...
+                        </p>
+                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping"
+                                style="margin-right: 8px;"></i> Add to cart</button>
                     </div>
 
                     <!-- Food Card 4 (Hidden normally, for scroll demo) -->
                     <div class="food-card">
                         <div class="food-img-container">
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.6</span>
-                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Spicy Thai Noodles">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Spicy Thai Noodles">
                         </div>
                         <div class="food-info">
                             <div class="food-title">Spicy Thai Noodle</div>
                             <div class="food-price">$16.50</div>
                         </div>
-                        <p class="food-desc">Rice noodles immersed in vibrant chili broth, topped with fresh scallion...</p>
-                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping" style="margin-right: 8px;"></i> Add to cart</button>
+                        <p class="food-desc">Rice noodles immersed in vibrant chili broth, topped with fresh scallion...
+                        </p>
+                        <button class="btn btn-green"><i class="fa-solid fa-bag-shopping"
+                                style="margin-right: 8px;"></i> Add to cart</button>
                     </div>
                 </div>
+
+                <div class="carousel" id="restaurant-carousel" style="display: none;">
+                    <!-- Restaurant Card 1 -->
+                    <div class="food-card">
+                        <div class="food-img-container">
+                            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</span>
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Krishnarpan">
+                        </div>
+                        <div class="food-info">
+                            <div class="food-title">Krishnarpan</div>
+                            <div class="food-price">Traditional</div>
+                        </div>
+                        <p class="food-desc">Experience authentic Nepali fine dining with traditional courses served in
+                            ...</p>
+                        <button class="btn btn-green"><i class="fa-solid fa-utensils" style="margin-right: 8px;"></i>
+                            View Menu</button>
+                    </div>
+
+                    <!-- Restaurant Card 2 -->
+                    <div class="food-card">
+                        <div class="food-img-container">
+                            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</span>
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Fire and Ice Pizzeria">
+                        </div>
+                        <div class="food-info">
+                            <div class="food-title">Fire and Ice Pizzeria</div>
+                            <div class="food-price">Italian</div>
+                        </div>
+                        <p class="food-desc">Serving Kathmandu's finest authentic Italian wood-fired pizzas since
+                            1995...</p>
+                        <button class="btn btn-green"><i class="fa-solid fa-utensils" style="margin-right: 8px;"></i>
+                            View Menu</button>
+                    </div>
+
+                    <!-- Restaurant Card 3 -->
+                    <div class="food-card">
+                        <div class="food-img-container">
+                            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.5</span>
+                            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="OR2K">
+                        </div>
+                        <div class="food-info">
+                            <div class="food-title">OR2K</div>
+                            <div class="food-price">Vegetarian</div>
+                        </div>
+                        <p class="food-desc">Middle Eastern vegetarian cafe with a relaxed floor-seating ambiance in
+                            Thamel...</p>
+                        <button class="btn btn-green"><i class="fa-solid fa-utensils" style="margin-right: 8px;"></i>
+                            View Menu</button>
+                    </div>
+
+                    <!-- Restaurant Card 4 -->
+                    <div class="food-card">
+                        <div class="food-img-container">
+                            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.7</span>
+                            <img src="https://images.unsplash.com/photo-1588661642283-9b27e8d538f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Bhojan Griha">
+                        </div>
+                        <div class="food-info">
+                            <div class="food-title">Bhojan Griha</div>
+                            <div class="food-price">Nepali</div>
+                        </div>
+                        <p class="food-desc">Authentic Nepali food served in a 150-year-old heritage building with
+                            cultural shows...</p>
+                        <button class="btn btn-green"><i class="fa-solid fa-utensils" style="margin-right: 8px;"></i>
+                            View Menu</button>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container contact-container">
-                <div class="contact-info">
-                    <h2 class="contact-title">Let's Connect</h2>
-                    <p>Have a question about our curated selections or interested in partnering with Feasto? Reach out and our concierge team will assist you.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <p>Email Us</p>
-                                <p>feastofood@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <p>Call Us</p>
-                                <p>9768380606</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-card contact-form">
-                    <form id="contactForm">
-                        <div class="form-group-row" style="margin-bottom: 0;">
-                            <div class="form-group">
-                                <label>FULL NAME</label>
-                                <div class="input-wrapper" style="padding: 0;">
-                                    <input type="text" id="contactName" placeholder="John Doe" style="padding-left: 16px;" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>EMAIL ADDRESS</label>
-                                <div class="input-wrapper" style="padding: 0;">
-                                    <input type="email" id="contactEmail" placeholder="john@example.com" style="padding-left: 16px;" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>YOUR MESSAGE</label>
-                            <div class="input-wrapper" style="padding: 0;">
-                                <textarea id="contactMessage" placeholder="How can we help you?" required></textarea>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+
     </div>
 
     <footer>
@@ -171,4 +202,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

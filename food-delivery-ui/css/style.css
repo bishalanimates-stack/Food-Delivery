@@ -25,11 +25,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-dark);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 a {
@@ -127,6 +131,12 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .logo {

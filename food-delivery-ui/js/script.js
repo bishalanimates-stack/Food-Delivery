@@ -64,37 +64,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Global references for carousels
+    const foodCarousel = document.getElementById('food-carousel');
+    const restaurantCarousel = document.getElementById('restaurant-carousel');
+    let activeCarousel = foodCarousel;
+
     // 2. Carousel Scrolling
-    const carousel = document.getElementById('food-carousel');
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
 
-    if (carousel && prevBtn && nextBtn) {
+    if (prevBtn && nextBtn) {
         // Calculate scroll amount based on card width + gap
         const scrollAmount = 350; // card width (320px) + gap (30px)
 
         nextBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            if (activeCarousel) {
+                activeCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
         });
 
         prevBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+             if (activeCarousel) {
+                activeCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+             }
         });
 
-        // Hide prev/next button based on scroll position
-        carousel.addEventListener('scroll', () => {
-            if (carousel.scrollLeft <= 0) {
+        const handleScroll = (carouselObj) => {
+            if (carouselObj !== activeCarousel) return; // Only process active carousel
+            
+            if (carouselObj.scrollLeft <= 0) {
                 prevBtn.style.display = 'none';
             } else {
                 prevBtn.style.display = 'flex';
             }
 
-            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+            if (carouselObj.scrollLeft + carouselObj.clientWidth >= carouselObj.scrollWidth - 10) {
                 nextBtn.style.display = 'none';
             } else {
                 nextBtn.style.display = 'flex';
             }
-        });
+        };
+
+        if (foodCarousel) foodCarousel.addEventListener('scroll', () => handleScroll(foodCarousel));
+        if (restaurantCarousel) restaurantCarousel.addEventListener('scroll', () => handleScroll(restaurantCarousel));
         
         // Initial setup for buttons
         prevBtn.style.display = 'none'; // Initially at start
@@ -128,8 +140,29 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add active class to clicked
             tab.classList.add('active');
             
-            // Here you would typically filter the content based on tab
-            console.log(`Switched to ${tab.dataset.tab} tab`);
+            // Switch carousels
+            if (tab.dataset.tab === 'foods') {
+                if (foodCarousel) foodCarousel.style.display = 'flex';
+                if (restaurantCarousel) restaurantCarousel.style.display = 'none';
+                activeCarousel = foodCarousel;
+            } else if (tab.dataset.tab === 'restaurants') {
+                if (foodCarousel) foodCarousel.style.display = 'none';
+                if (restaurantCarousel) restaurantCarousel.style.display = 'flex';
+                activeCarousel = restaurantCarousel;
+            }
+            
+            // Reset scroll positions and evaluate button visibility
+            if (activeCarousel && prevBtn && nextBtn) {
+                activeCarousel.scrollLeft = 0;
+                prevBtn.style.display = 'none'; // Start
+                
+                // Hide next if fewer items than view can hold
+                if (activeCarousel.scrollWidth <= activeCarousel.clientWidth) {
+                    nextBtn.style.display = 'none';
+                } else {
+                    nextBtn.style.display = 'flex';
+                }
+            }
         });
     });
 
